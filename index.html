@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>sim</title>
+    <link rel="stylesheet" href="style.css">
+    <link>
+</head>
+
+<body>
+    <div id="controls">
+        <button id="playBtn" style="background-color: #4a4641;">Start</button>
+        <label><u>Particles to spawn:</u><br><sub>Dont use too many particles, or your potato might burn, still have to optimize it, maybe next week.</sub></label>
+        <div>
+            <input type="range" min="0" max="1000" value="200" id="redParticle" style="width: 100%;">
+            <span class="color-icon red" id="redValue">50</span>
+        </div>
+        <div>
+            <input type="range" min="0" max="1000" value="200" id="blueParticle" style="width: 100%;">
+            <span class="color-icon blue" id="blueValue">50</span>
+        </div>
+        <div>
+            <input type="range" min="0" max="1000" value="200" id="greenParticle" style="width: 100%;">
+            <span class="color-icon green" id="greenValue">50</span>
+        </div>
+        <div>
+            <input type="range" min="0" max="1000" value="200" id="yellowParticle" style="width: 100%;">
+            <span class="color-icon yellow" id="yellowValue">50</span>
+        </div>
+        <div>
+            <input type="range" min="0" max="1000" value="200" id="whiteParticle" style="width: 100%;">
+            <span class="color-icon white" id="whiteValue">50</span>
+        </div>
+        <label><u>Rules:</u><br><sup></sup>Attraction and Repulsion<br>-ve = Attraction<br>+ve =
+            Repulsion<br></sup></label>
+        <table id="control-pad">
+            <tr>
+                <td></td>
+                <td style="background-color: red;"></td>
+                <td style="background-color: blue;"></td>
+                <td style="background-color: green;"></td>
+                <td style="background-color: yellow;"></td>
+                <td style="background-color: white;"></td>
+            </tr>
+            <tr>
+                <td style="background-color: red;"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+            </tr>
+            <tr>
+                <td style="background-color: blue;"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+            </tr>
+            <tr>
+                <td style="background-color: green;"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+            </tr>
+            <tr>
+                <td style="background-color: yellow;"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+            </tr>
+            <tr>
+                <td style="background-color: white;"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+                <td><input type="number" min="-10" max="10" value="0"></td>
+            </tr>
+        </table>
+        <button id="ruleBtn" style="background-color: #4a4641;">Randomize</button>
+        <label for="boundary">Boundary Closed</label><input type="checkbox" id="boundary">
+    </div>
+    <canvas id="playground"></canvas>
+    <script src="./script.js"></script>
+</body>
+
+</html>
